@@ -1,5 +1,7 @@
 package com.example.owner.geome;
 
+import android.content.Intent;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,8 +17,19 @@ public class splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Parse.enableLocalDatastore(this);
-        Parse.initialize(this);
+
+        new CountDownTimer(3000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+
+            }
+
+            public void onFinish() {
+                Intent launchExerciseActivity = new Intent(getApplicationContext(), ExerciseActivity.class);
+                startActivity(launchExerciseActivity);
+            }
+        }.start();
+
     }
 
     @Override

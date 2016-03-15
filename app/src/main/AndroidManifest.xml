@@ -20,6 +20,11 @@
             android:name=".explanation"
             android:label="@string/title_activity_explanation" >
         </activity>
+        <activity
+            android:name=".ExerciseActivity"
+            android:label="Exercise" >
+
+        </activity>
 
         <meta-data
             android:name="com.parse.APPLICATION_ID"
